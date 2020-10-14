@@ -1,0 +1,88 @@
+body{
+	
+    background-image:url("../imgs/fond_regi.jpg");
+	font-family: "Segoe UI", sans-serif;
+    font-size:100%;
+}
+
+
+
+
+*{  
+    
+	margin:0px;
+	padding:0px;
+	
+}
+
+div#body{
+    margin:auto;
+	margin-top:40px;
+	width:520px;
+	height:769px;
+	border:1px solid black;
+	
+	
+}
+
+div#subir{
+	width:520px;
+	height:700px;
+	background-color:#0625E3;
+	float:left;
+}
+
+.container {
+    padding: 36px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 94%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #E6E9FD;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+	
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 20px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+    background-color:#0728F4;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 10;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+    color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+    background-color: #f1f1f1;
+    text-align: center;
+}
+s

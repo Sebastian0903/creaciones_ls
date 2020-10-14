@@ -1,0 +1,58 @@
+<?php
+  session_start();
+
+  if (($_SESSION['iniciar'])!="") {
+    
+?>
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Formulario de Registro SCIII</title>
+<link href="css/estilopro.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+
+
+<div class="group">
+  <form action="registro.php" method="POST">
+  <h2><em>Formulario de Registro</em></h2>
+  
+     
+        
+      
+      <label for="apellido">ID <span><em>(requerido)</em></span></label>
+      <input type="text" name="apellido" class="form-input" />             
+      
+      <label for="email">Nombre <span><em>(requerido)</em></span></label>
+      <input type="text" name="email" class="form-input" />
+
+      <label for="apellido">img <span><em>(requerido)</em></span></label>
+      <input type="text" name="img" class="form-input" required/>             
+      
+      <label for="email">precio <span><em>(requerido)</em></span></label>
+      <input type="text" name="precio" class="form-input" />
+
+     <center> <input class="form-btn" name="submit" type="submit" value="Suscribirse" /></center>
+    </p>
+  </form>
+</div>
+</body>
+</html>
+
+
+<?php
+
+}else{
+
+  echo '<script>
+                            alert("Inicia sesion");
+                            location.href = "form_inicio.html";
+                          </script>';
+                    exit;
+}
+
+?>

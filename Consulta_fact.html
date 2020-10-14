@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar factura</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="js/Consulta_fact.js"></script>
+    <link rel="stylesheet" href="css/Consulta_fact.css" type="text/css" media="all">
+    <script language="javascript">
+        function doSearch()
+        {
+            const tableReg = document.getElementById('datos');
+            const searchText = document.getElementById('searchTerm').value.toLowerCase();
+            let total = 0;
+ 
+            // Recorremos todas las filas con contenido de la tabla
+            for (let i = 1; i < tableReg.rows.length; i++) {
+                // Si el td tiene la clase "noSearch" no se busca en su cntenido
+                if (tableReg.rows[i].classList.contains("noSearch")) {
+                    continue;
+                }
+ 
+                let found = false;
+                const cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+                // Recorremos todas las celdas
+                for (let j = 0; j < cellsOfRow.length && !found; j++) {
+                    const compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+                    // Buscamos el texto en el contenido de la celda
+                    if (searchText.length == 0 || compareWith.indexOf(searchText) > -1) {
+                        found = true;
+                        total++;
+                    }
+                }
+                if (found) {
+                    tableReg.rows[i].style.display = '';
+                } else {
+                    // si no ha encontrado ninguna coincidencia, esconde la
+                    // fila de la tabla
+                    tableReg.rows[i].style.display = 'none';
+                }
+            }
+ 
+            // mostramos las coincidencias
+            const lastTR=tableReg.rows[tableReg.rows.length-1];
+            const td=lastTR.querySelector("td");
+            lastTR.classList.remove("hide", "red");
+            if (searchText == "") {
+                lastTR.classList.add("hide");
+            } else if (total) {
+                td.innerHTML="Se ha encontrado "+total+" coincidencia"+((total>1)?"s":"");
+            } else {
+                lastTR.classList.add("red");
+                td.innerHTML="No se han encontrado coincidencias";
+            }
+        }
+
+
+        function goBack() {
+  window.history.back();
+}
+    </script>
+ 
+   
+<body>
+<center>
+    <div id="calendario">
+	<div id="busca">
+    <form>
+	<img onclick="goBack()" src="imgs/atras.png" align="left" width=80 height=80>
+        <strong><h2>¿Qué busca?</h3></strong> 
+        
+    </form>
+	</div>
+	
+
+		
+		<div id="busca">
+    <form action="#" name="buscar">
+      <p>Buscar ... MES
+	  <input id="searchTerm" placeholder="maletas,gorras,etc.." type="text" onkeyup="doSearch()" /></h2>
+        <select name="buscames">
+          <option value="0">Compra</option>
+          <option value="1">Venta</option>
+          
+        </select>
+      ... AÑO ...
+        <input type="button" value="BUSCAR" onclick="mifecha()" />
+      ... 
+
+      </p>
+    </form>
+  </div>
+	</div>	
+</center>
+		
+		
+		<center>
+    <p>
+        <table id="datos">
+            <tr>
+                <th>Código Factura</th><th>Tipo</th><th>fecha</th><th>venta o compra</th><th>Cant.</th>
+            </tr>
+            <tr><a href="factura.html">
+                <td>1<a href="factura.html"><img src="imgs/adelante.png"></a></td><td>cartuchera</td><td>02/02/2019</td><td>venta</td><td>30</td>
+            </tr>
+		
+		
+            <tr>
+                <td>2<a href="factura.html"><img src="imgs/adelante.png"></a></td><td>maleta</td><td>13/05/2019</td><td>venta</td><td>31</td>
+            </tr>
+            <tr>
+                <td>3<a href="factura.html"><img src="imgs/adelante.png"></a></td><td>chaqueta</td><td>05/07/2019</td><td>compra</td><td>25</td>
+            </tr>
+            <tr>
+                <td>4<a href="factura.html"><img src="imgs/adelante.png"></a></td><td>gorra</td><td>27/05/2019</td><td>venta</td><td>56</td>
+            </tr>
+            <tr>
+                <td>8<a href="factura.html"><img src="imgs/adelante.png"></a></td><td>Tela</td><td>17/08/2019</td><td>compra</td><td>56</td>
+            </tr>
+            <tr>
+                <td>4<a href="factura.html"><img src="imgs/adelante.png"></a></td><td>cremallera</td><td>15/02/2019</td><td>compra</td><td>56</td>
+            </tr>
+            <tr class='noSearch hide'>
+                <td colspan="5"></td>
+            </tr>
+        </table>
+   </center>
+    </p>
+</body>
+</html>
+

@@ -1,0 +1,65 @@
+
+body {
+    background-image:url("../imgs/fond_calend.png");
+	font-family: "Segoe UI", sans-serif;
+    font-size:100%;
+
+}
+
+
+
+/*instrucciones generales*/
+
+* { margin: auto; }
+
+/*la parte de arriba*/ 
+h1 { text-align: center; padding: 0.5em; color: white}
+
+
+/*div principal del calendario*/
+#calendario { border:solid silver  ; max-width: 536px; 
+              background-image:url("../imgs/calend.jpg"); text-align: center; }  /*v*/
+			  
+			  
+			  
+/*tabla del calendario*/
+#diasc { border: 1px solid black; border-collapse: 
+         separate; border-spacing: 4px; }
+#diasc th,#diasc td { font: normal 14pt arial; width: 70px; height: 30px; }
+#diasc th { color: #9bf5ff; background-color: #0820D6 }
+#diasc td { color: #2D66EC; background-color: #2D66EC }
+
+.button {
+    background-color: #C0C0C0; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+/*línea de la fecha actual*/
+#fechaactual { font: bold 12pt arial; padding: 0.4em }
+#fechaactual i { cursor: pointer ; }
+#fechaactual i:hover { color: #2D66EC; text-decoration: underline; }
+
+
+/*formulario de busqueda de fechas*/
+#buscafecha { background-color: #0820D6; color: #9bf5ff; padding: 5px }
+#buscafecha select, #buscafecha input  { background-color: #9bf5ff; 
+            color: #242740; font: bold 10pt arial;  }
+#buscafecha [type=text]  { text-align: center; }
+#buscafecha  [type=button] { cursor: pointer; }
+
+
+/*cabecera del calendario*/ 
+#anterior { float: left; width: 100px; font: bold 12pt arial;
+          padding: 0.5em 0.1em; cursor: pointer ; }
+#posterior { float: right; width: 100px; font: bold 12pt arial; 
+          padding: 0.5em 0.1em; cursor: pointer ;}
+#anterior:hover {color: blue;text-decoration: underline;}
+#posterior:hover {color: blue; text-decoration: underline;}
+#titulos { color: #FFFFFF; padding: 0.2em; }

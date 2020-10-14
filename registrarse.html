@@ -1,0 +1,79 @@
+<?php
+   session_start();
+   require("php/conexion.php");
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title></title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="css/registrarse.css" type="text/css" media="all">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="validar.js" ></script>
+</head>
+	
+	
+<body>
+<form action="#" method="POST">
+	<div id="body">
+	    <div id="subir">
+		
+		
+  <div class="container">
+    <center><h1 class="mejor"><font face="godofwar">REGISTRARSE</font></h1></center>
+    
+    <hr>
+
+    <label for="name"><b>Nombre</b></label>
+    <input type="text" placeholder="Digite su nombre" id="Nombre" name="Nombre" required>
+
+	<label for="name"><b>Apellido</b></label>
+    <input type="text" placeholder="Digite su apellido" id="apellido" name="apellido" required>
+
+  
+
+   <b>Tipo de usuario</b>
+   <br>
+
+   <select id="select" name="Tipo de usuario">
+     <option value="value1">Contador</option> 
+     <option value="value2" selected>Director ejecutivo</option>
+     <option value="value3">Almacenista</option>
+     <option value="value3">Empleado</option>
+     <option value="value3">Cliente</option>
+     <option value="value3">Proveedor</option>
+   </select>
+<br>
+<br>
+    <label for="psw"><b>Correo</b></label>
+    <input type="text" placeholder="Digite su correo" id="correo" name="correo" required>
+<br>
+    <label for="psw"><b>usuario</b></label>
+    <input type="text" placeholder="Digite su usuario" id="usuario" name="usuario" required>
+
+    <label for="psw"><b>Contraseña</b></label>
+    <input type="password" placeholder="Digite su contraseña" id="contrasena" name="contrasena" required>
+
+    <label for="ingreso3"><b>Documento de Identidad</b></label>
+    <input type="text" placeholder="Documento De Identidad" id="id_usr" name="identidad" class="ingreso3" required>
+	
+    	
+    <hr>
+
+    <button type="submit" class="registerbtn" name="enviar" value="Enviar"><font face="godofwar">REGISTRAR</font></button>
+  </div>
+ 
+  <div class="container signin">
+    <center><p><a href="Principal.html" ><img src="imgs/boton.png" width=80 height=80></a></p></center>
+  </div>
+</form>
+        </div>
+		</div>
+		<br>
+	
+	</body>
+</html>

@@ -1,0 +1,66 @@
+body {
+    background-image:url("../imgs/foMa.jpeg");
+	font-family: "Segoe UI", sans-serif;
+    font-size:100%;
+}
+
+
+#filtro{
+    
+    height: 100%;
+    background-color: rgba(124,124,124,0.1[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]);
+    width: 100%;
+	
+}
+
+
+h1{
+    
+    color: aqua;
+}
+
+
+#busca { background-color: #0820D6; color: #9bf5ff; padding: 1px }
+#busca select, #busca input  { background-color: #9bf5ff; 
+            color: #242740; font: bold 10pt arial;  }
+#busca [type=text]  { text-align: center; }
+#busca [type=button] { cursor: pointer; }
+
+
+#calendario { border:solid silver  ; max-width: 536px; max-height:150px;
+              background-image:url("../imgs/calend.jpg"); text-align: center; }  /*v*/
+
+
+h2{ 
+
+    background: -webkit-linear-gradient(blue, aqua);
+    color:white;
+}
+
+table {
+border: 2px solid #000;
+   border-collapse: separate;
+   border-spacing: 5px;
+   background: -webkit-linear-gradient(blue, aqua);
+   color: #fff;
+}
+td, th {
+   background: #fff;
+   color: #000;
+    
+    width: 25%;
+    
+}
+      
+        .hide {display:none;}
+        .red {color:Red;}
+		
+img{
+		
+max-width:40%;
+max-height:30%;
+		float:right;
+		
+		
+}
+

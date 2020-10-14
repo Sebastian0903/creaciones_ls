@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+
+<head>
+<link rel="shortcut icon" href="imgs/logowiii.png" />
+    <title>Creaciones Daniela</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="css/miestilo.css" type="text/css" media="all">
+	<link rel="stylesheet" href="font/style.css" type="text/css" media="all">
+    
+    <link rel="stylesheet" href="estilos.css">
+    
+     <script src="js/jquery.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+
+	
+</head>
+
+<body>
+<header>
+    
+		
+		<input type="checkbox" id="btn-menu">
+		<label for="btn-menu"><img src="imgs/menu.png"  width="30px" height="30px">
+
+
+		</label>
+   
+		<nav class="menu">
+
+
+			<ul>
+				
+				
+				
+				<li><a href="Galeria.html"><span class="icon-file-picture"/> Galería</a></li>
+				<li><a href="calendario.html"><span class="icon-user-tie"/> Calendario</a></li>
+				<li><a href="php/form_inicio.php"><span class="icon-user-check"/> Ingresar</a></li>
+				<li><a href="formulario_registro.php"><span class="icon-user-plus"/> Registrarse</a></li>
+				
+
+                
+                
+    <input type="search" id="input-search" placeholder="Buscar aqui">
+    
+    <div class="content-search">
+        <div class="content-table">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <td></td>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    
+                    
+                    
+                    <tr>
+                        <td><a href="catalogo.html">catálogo</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="tabla.html">material</a></td>
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td><a href="proveedores.html">proveedores</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="edcargos.html">actualizar información usuario</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="edclientes.html">actualizar información cliente </a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="#">actualizar información proveedor</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><a href="carro.html">encargo de varios prodúctos</a></td>
+                    </tr>
+                    
+                    
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+                
+			</ul>
+
+
+
+
+
+		</nav>
+
+    
+ 
+
+
+
+	</header>
+
+  
+   
+	
+		<div id="sidebar" class="sidebar">
+		<a href="#" class="boton-cerrar" onclick="ocultar()">&times;</a>
+			<ul class="menu">
+				<li><div><a><h1>Misión</h1>
+<p>Diseñar y producir prendas de vestir de la más alta calidad, de acuerdo a los gustos y tendencias del mercado, logrando plena satisfacción de nuestros clientes, contribuyendo al desarrollo económico del país y maximizando el valor para los accionistas. Es misión de Creaciones Daniela L.S., ofrecer a nuestro personal un entorno laboral estable y plenamente identificado con los objetivos de la empresa y con la integración de cada uno de nosotros.</p></a></li>
+
+
+				<li><a><h1>Visión</h1>
+<p>Ser reconocido como una empresa líder en confecciones de prendas de vestir con calidad internacional.</p></h3></a></li></p>
+			
+				
+			</ul>
+  
+	</div>
+			
+	
+
+    
+    
+    
+ 
+	<div id="contenido">
+	    
+	<div id="salir" class="box1"><a href="php/cerrar.php"><img class = "pa" src = "imgs/salir.png"  />cerrar sesión</div>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		
+		
+		
+	
+		<div id="cal2" class="container">
+<div class="box"><a href="cart/carro.php"><img class = "pa" src = "imgs/cart.png"/></div>
+ 
+ 
+ 	
+
+
+</div>
+	 <br>
+		
+		
+	
+		
+		<center><p><a href="Galeria.html"><img src="imgs/new_log.png" ></a></p></center>
+		
+		
+		
+		
+		
+		
+
+			
+	</div>
+ 
+
+   <script src="js/search.js"></script>
+	
+	
+<script>
+function mostrar() {
+    document.getElementById("sidebar").style.width = "250px";
+    document.getElementById("contenido").style.marginLeft = "250px";
+    document.getElementById("abrir").style.display = "none";
+    document.getElementById("cerrar").style.display = "inline";
+}
+
+function ocultar() {
+    document.getElementById("sidebar").style.width = "0";
+    document.getElementById("contenido").style.marginLeft = "0";
+    document.getElementById("abrir").style.display = "inline";
+    document.getElementById("cerrar").style.display = "none";
+}
+</script>
+     
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+
+
+body {
+
+/* Ubicación de la imagen */
+
+background-image: url(imgs/fondo.png);
+
+/* Para dejar la imagen de fondo centrada, vertical y
+
+horizontalmente */
+
+background-position: center center;
+
+/* Para que la imagen de fondo no se repita */
+
+background-repeat: no-repeat;
+
+/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+
+background-attachment: fixed;
+
+/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+
+background-size: cover;
+
+/* Se muestra un color de fondo mientras se está cargando la imagen
+
+de fondo o si hay problemas para cargarla */
+
+background-color: #66999;
+
+}
+
+
+
+
+
+
+
+ .container{
+  width: 120px;
+  height: auto;
+  
+  
+
+   
+  margin-top:50px;
+
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+
+  }
+
+  .box{
+    width: 200px;
+    height: 100px;
+    
+    
+    box-sizing: border-box;
+    
+    text-decoration-color: red;
+
+  }
+
+  .box1{
+    width: 120px;
+    height: 100px;
+    
+    
+    box-sizing: border-box;
+    font-size: 20px;
+    
+
+  }
+
+ 
+
+
+
+
+@media screen and (max-width: 600px){
+     .container{
+      width: 40%;
+      height: 50px;
+      margin-top: -2px;
+
+     }
+  }
+
+
+
+
+
+  @media screen and (max-width: 1200px){
+     .box{
+      width: 40%;
+      
+     }
+
+     
+  }
+
+  @media screen and (max-width: 600px){
+     .box{
+      width: 60px;
+      height: 60px;
+      
+     }
+     
+  }
+
+
+   @media screen and (max-width: 1200px){
+     .box1{
+      width: 40%;
+      
+     }
+  }
+
+  @media screen and (max-width: 600px){
+     .box1{
+      width: 60px;
+      height: 60px;
+      
+     }
+  }
+
+
+
+  img.pa{
+
+    margin:auto;
+  margin-top:5px;
+
+    width:auto; 
+    height:80%;
+
+  }
+
+  img.pa2{
+
+    margin:auto;
+    margin-top:5px;
+    
+    width:80%; 
+    height:80%;
+
+  }
+
+
+  #salir{float: left; margin-top: -15px;}
+
+  a{color: red;}
+
+</style> 

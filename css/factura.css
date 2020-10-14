@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+#fl{
+
+  width: 100%;
+  height: 100%;
+
+  
+}
+
+body{
+  color:#A5FEFF;
+  background-image: url(../imgs/fn.jpg);
+}
+
+
+
+#myTable {
+
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid white;
+  font-size: 18px;
+  color:black;
+}
+
+#myTable th, #myTable td {
+  text-align: center;
+  padding: 12px;
+}
+
+#filtrom{
+  
+}
+
+#myTable tr {
+  border-bottom: 2px solid black;
+  
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #FF8333;
+}
+
+#myTable th{
+  background-color: #FF8333;
+}
+
+
+#myTable2{
+
+  font-family: arial, sans-serif;
+  border-collapse.:.;
+  width: 100%;
+   
+}
+ 
+td{
+   border: 2px solid #000000;
+   text-align: left;
+   padding: 8px;
+  background-color: white;
+}
+
+th{
+   border: 2px solid #000000;
+   text-align: left;
+   padding: 8px;
+  background-color: white;
+}
+
+
+
+tr:nth-child(even) {
+   background-color: rgba(21, 77, 182,0.4);
+
+}
+
+
+
+
+
+
+#myTable3{
+
+
+  font-family: arial, sans-serif;
+  border-collapse.:.;
+  width: 100%;
+  height: 10%;
+   
+}
+
+td, th {
+   border: 2px solid #000000;
+   text-align: left;
+
+   
+}
+
+tr:nth-child(even) {
+   background-color: rgba(21, 77, 182,0.4);
+}
+
+
+
+img{
+	
+	float:left;
+}
+
+
+
+
+#cod {
+
+	float: right;
+
+}
+

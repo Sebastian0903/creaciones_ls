@@ -1,0 +1,70 @@
+body {
+    background-image:url("../imgs/foMa.jpeg");
+	font-family: "Segoe UI", sans-serif;
+    font-size:100%;
+}
+
+
+#filtro{
+    
+    height: 100%;
+    background-color: rgba(124,124,124,0.1[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]);
+    width: 100%;
+	
+}
+
+
+*{  
+    
+	margin:0px;
+	padding:0px;
+	
+}
+
+
+div#body{
+    margin:auto;
+	margin-top:40px;
+	width:900px;
+	height:510px;
+	border:1px solid black;
+	
+	
+}
+
+div#menu{
+	
+    max-width:10px;
+	
+	float:right;
+}
+
+div#subir{
+	
+	width:448px;
+	height:510px;
+	background-color:#FF8333;
+	float:left;
+	border:1px solid black;
+}
+
+div#buscar{
+	width:448px;
+	height:510px;
+	background-color:white;
+	float:left;
+	border:1px solid black;
+}
+
+#body img {
+  position:center;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#body img.top:hover {
+  opacity:0;
+}

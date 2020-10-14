@@ -1,0 +1,68 @@
+body {
+    background-image:url("../imgs/foMa.jpeg");
+	font-family: "Segoe UI", sans-serif;
+    font-size:100%;
+}
+
+
+#filtro{
+    
+    height: 100%;
+    background-color: rgba(124,124,124,0.1[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]);
+    width: 100%;
+	
+}
+
+
+*{  
+    
+	margin:0px;
+	padding:0px;
+	
+}
+
+
+
+
+
+
+div#body{
+    margin:auto;
+	margin-top:40px;
+	width:980px;
+	height:600px;
+	border:1px solid black;
+	
+	
+}
+
+div#subir{
+	
+	width:490px;
+	height:600px;
+	background-color:#FF8333;
+	float:left;
+}
+
+
+
+
+div#buscar{
+	width:490px;
+	height:600px;
+	background-color:white;
+	float:left;
+}
+
+#body img {
+  position:center;
+
+ 
+}
+
+img.pa{
+
+
+	max-width:30%;
+	max-height:auto;
+}
