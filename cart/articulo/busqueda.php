@@ -31,24 +31,18 @@ $objConexion=Conectarse();
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Listar Empleados:)</title>
+<title>Edición artículo</title>
 </head>
 
 <body>
-<h1 align="center"> LISTAR EMPLEADOS</h1>
+<h1 align="center"> Edición de producto</h1>
 <table width="89%" border="0" align="center">
   <tr align="center" bgcolor="#FFFF99">
-    <td width="11%">ID</td>
-    <td width="16%">Imagen</td>
+    <td width="16%">Imagen principal</td>
+    <td width="16%">Imagen lateral</td>
+    <td width="16%">Imagen trasera</td>
     <td width="19%">Nombre</td>
-    <td width="12%">Estado</td>
-    <td width="15%">Fecha de Ingreso</td>
-    <td width="7%">Precio</td>
-    <td width="10%">Descripción</td>
-    <td width="10%">Unidades disponibles</td>
-    <td width="10%">IVA</td>
-    <td width="10%">Modificar</td>
-    <td width="10%">Eliminar</td>
+    
   </tr>
   
   <?php
@@ -59,39 +53,40 @@ $objConexion=Conectarse();
      
 	?>
 	<tr bgcolor="#CCCCFF">
-        <td> <?php  echo $producto->id_producto?></td>
         <td><img src="../imgs/<?php  echo $producto->img  ?>" width="auto" height="220" alt="">  </td>
+        <td><img src="../imgs_lat/<?php  echo $producto->img_lat  ?>" width="auto" height="220" alt="">  </td>
+        <td><img src="../imgs_back/<?php  echo $producto->img_back  ?>" width="auto" height="220" alt="">  </td>
         <td><?php  echo $producto->  nombre_producto?></td>
-        <td><?php  echo $producto-> estado_producto ?></td>
-        <td><?php  echo $producto->fecha_registro  ?></td>
-        <td><?php  echo $producto-> precio_producto ?></td>
-        <td><?php  echo $producto-> descripcion ?></td>
-        <td><?php  echo $producto-> unidades_dispo ?></td>
-        <td><?php  echo $producto-> IVA ?>%</td>
+
+  </tr>
+  <tr align="center" bgcolor="#FFFF99">
+    <td width="12%">Estado</td>
+    <td width="7%">Precio</td>
+    <td width="10%">Modificar</td>
+    <td width="10%">Eliminar</td>
+  </tr>
+  <tr bgcolor="#CCCCFF">
         
+        <td><?php  echo $producto-> estado_producto ?></td>
+        <td><?php  echo $producto-> precio_producto ?></td>        
         
     
         <td align="center"><a href="modificar_art.php?id_producto=<?php  echo $producto->id_producto?>"><img src="../../imgs/descarga.png" width="39" height="34" /></a></td>
         
         
         <td align="center"><a href="eliminar_art.php?id_producto=<?php  echo $producto->id_producto?>"><img src="../../imgs/descarga1.png" width="39" height="34" /></a></td>
-        <?php  
-        }
-      
-    ?>
-        
-        
-        <?php  
-        }
-      
-    ?>
+    
          
-  	</tr>
-
-  
-  
-  
-  
+  </tr>
+  <?php  
+      }
+    ?>
+        
+        
+        <?php  
+        }
+      
+    ?>
 </table>
 <p>
 

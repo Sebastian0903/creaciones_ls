@@ -29,7 +29,7 @@ $objConexion=Conectarse();
 
 	 					$_SESSION['iniciar']= 'ingresar';
 
-	 					header("location: ../Principal.html");
+	 					header("location: ../Index.html");
 	 						 				}
                     
                     

@@ -37,14 +37,14 @@ $resultado = $objConexion->query($sql);
   <form action="registro.php" method="POST" enctype="multipart/form-data">
   <h2><em>Registro de nuevo artículo</em></h2>
   
-     
-        
+      <label for="apellido">Imagen principal<span><em>(requerido)</em></span></label>
+      <input placeholder="imagen.jpg" type="file" name="imagen" class="form-input" required/> 
       
-      <label for="apellido">ID <span><em>(requerido)</em></span></label>
-      <input type="text" name="codigo" class="form-input" required/>             
-      
-      <label for="apellido">imagen <span><em>(requerido)</em></span></label>
-      <input placeholder="imagen.jpg" type="file" name="imagen" class="form-input" required/>     
+      <label for="apellido">Imagen lateral<span><em>(requerido)</em></span></label>
+      <input placeholder="imagen.jpg" type="file" name="img_lat" class="form-input" />
+
+      <label for="apellido">Imagen trasera<span><em>(requerido)</em></span></label>
+      <input placeholder="imagen.jpg" type="file" name="img_back" class="form-input" />
       
       <label for="email">Nombre <span><em>(requerido)</em></span></label>
       <input type="text" name="nombreart" class="form-input" />
@@ -56,7 +56,11 @@ $resultado = $objConexion->query($sql);
                     <option id="tipo1" value="Chaquetas">Chaqueta</option>
                     <option id="tipo2" value="Gorras">Gorra</option>
                     <option id="tipo1" value="Bolsas">Bolsa</option>
-                    
+                    <option id="tipo2" value="camisetas">Camiseta</option>
+                    <option id="tipo1" value="camisas">Camisa</option>
+                    <option id="tipo1" value="overoles">Overol</option>
+                    <option id="tipo2" value="piernero">Piernero</option>
+                    <option id="tipo1" value="maletin">Maletín</option>
                 </select>
         
         
@@ -66,22 +70,9 @@ $resultado = $objConexion->query($sql);
                     <option id="tipo2" value="Inactivo">Inactivo</option>
                 </select>
         
-      <label for="email">Fecha de registro <span><em>(requerido)</em></span></label>
-      <input type="date" name="fecha" class="form-input" />
-      
       <label for="email">precio <span><em>(requerido)</em></span></label>
       <input autocomplete="off" onKeyPress="return soloNumeros(event)" type="text" name="precioart" class="form-input" />
-      
-      
-      <label for="email">Descripción <span><em>(requerido)</em></span></label>
-      <input type="text" name="describ" class="form-input" />
-      
-      <label for="email">Unidades disponibles<span><em>(requerido)</em></span></label>
-      <input autocomplete="off" onKeyPress="return soloNumeros(event)" type="text" name="dispo" class="form-input" />
-      
-      <label for="email">IVA<span><em>(requerido)</em></span></label>
-      <input onKeyPress="return soloNumeros(event)" id="bloquear" type="text" name="iva" class="form-input" autocomplete="off"/>
-
+    
      <center> <input class="form-btn" name="submit" type="submit" value="Guardar información" /></center>
     </p>
   </form>

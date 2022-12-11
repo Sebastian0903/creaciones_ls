@@ -2,7 +2,7 @@
     $BD_host="localhost";
     $BD_usr="root";
     $BD_pass="";
-    $BD_database="programacion";
+    $BD_database="programacion1";
     
     $conectar=mysqli_connect($BD_host,$BD_usr,$BD_pass);
     

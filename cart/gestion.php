@@ -24,7 +24,7 @@
 
 <body>
 <div class="container">
-<a href="../principal.html"><img src="../imgs/atras.png" align="left" width=80 height=80></a>
+<a href="../Index.html"><img src="../imgs/atras.png" align="left" width=80 height=80></a>
 <center> <div class="box"><a href="registro_car.php"><img class = "pa" src = "imgs/subir_datos2.png"/><br>Subir información</a></div></center>
  <center><div class="box1"><a href="actualizar_art.html"><img class = "pa2" src = "imgs/logo wiiii2.png"/><br>Actualizar información</a></div></center>
 

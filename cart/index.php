@@ -80,7 +80,7 @@ if(isset($_GET['action']))
 </script>
 
 <body>
-<a href="../Principal.html" ><img src="../imgs/boton.png" width=80 height=80></a>
+<a href="../Index.html" ><img src="../imgs/boton.png" width=80 height=80></a>
 <div class="container">
     <h1 align="center">Seleccione los artículos para encargar </h1>
     <?php
