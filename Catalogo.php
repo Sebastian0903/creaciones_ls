@@ -16,10 +16,27 @@ require_once 'cart/conexion.php';
 
 	<script src="js/jquery-3.2.1.js"></script>
 	<script src="js/script.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="css/galeria.css" type="text/css" media="all">
+<!-- <script src="js/jquery-1.10.2.min.js"></script> -->
+<script language="javascript" src="js/imagen.js" type="text/javascript"></script>
+
+  <meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" type="text/css" href="content_slider_style.css" />
+<script type="text/javascript" src="js/jquery.1.3.2.min.js" ></script>
+<script type="text/javascript" src="js/jquery-ui.min.js" ></script>
     <title>Carrito</title>
 </head>
 
 <script type="text/javascript">
+$(document).ready(function(){
+        $("#featured > ul").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 5000, true);
+    });
+
   function goBack() {
   window.history.back();
 }
@@ -57,12 +74,12 @@ $resul= mysqli_query($conexion,$sql);
 if(mysqli_num_rows($resul) > 0){
     while ($row=mysqli_fetch_array($resul)){
 ?>
-    <div class="col-md-3" category="<?php echo $row['tipo_producto'];?>">
+    <div class="col-md-3 product-item" category="<?php echo $row['tipo_product'];?>">
         <form method="post" action="index.php?action=add&id=<?php echo $row['id_producto']; ?>">
             <?php
 
             ?>
-            <div class="carro product-item" align="center"category="<?php echo $row['tipo_producto'];?>">
+            <div class="carro" align="center"category="<?php echo $row['tipo_product'];?>">
                 <img src="cart/imgs/<?php echo $row['img'];?>" class="img-responsive" onclick="document.getElementById('<?php echo $row['id_producto']; ?>').style.display='block'" style="width:auto;"/><br />
                 <h4 class="text-info"><?php echo $row['nombre_producto'];?></h4>
                 <h4 class="text-danger">$<?php echo $row['precio_producto'];?></h4>
@@ -84,9 +101,10 @@ if(mysqli_num_rows($resul) > 0){
   <form class="modal-content animate">
     <div class="imgcontainer">
       <span onclick="document.getElementById('<?php echo $row['id_producto']; ?>').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <div id="raro"><h4 class="descripcion"><?php echo $row['descripcion'];?></h4></div>
+      <div id="raro"><h4 class="descripcion"><?php echo $row['nombre_producto'];?></h4></div>
       <img src="cart/imgs/<?php echo $row['img'];?>" alt="Avatar" class="avatar">
       
+    
     </div>
 </form>
 </div>
@@ -138,9 +156,9 @@ button:hover {
 img.avatar {
   width: 40%;
 }
-
 .container {
-  padding: 16px;
+  padding: 2px;
+  display: contents;
 }
 
     h4.descripcion{
@@ -167,10 +185,10 @@ img.avatar {
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  /* overflow: auto; */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
+  /* padding-top: 60px; */
 }
 
 /* Modal Content/Box */
