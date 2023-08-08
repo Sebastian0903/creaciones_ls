@@ -16,7 +16,7 @@ require_once 'cart/conexion.php';
 
 	<script src="js/jquery-3.2.1.js"></script>
 	<script src="js/script.js"></script>
-
+  <link rel="stylesheet" href="css/galeria_nueva/galeria2023.css" type="text/css" media="all">
 
 
 
@@ -33,12 +33,32 @@ require_once 'cart/conexion.php';
 </head>
 
 <script type="text/javascript">
-$(document).ready(function(){
-        $("#featured > ul").tabs({fx:{opacity: "toggle"}}).tabs("rotate", 5000, true);
-    });
+$(document).ready(function() {
+  let self;
+  $(".thumbnail").click(function() {
+    const imgSrc = $(this).find("img").attr("src");
+    // $("#mainImage").css("opacity", 0);  Establecer la opacidad a 0
+
+    // Esperar a que se complete la transición antes de cambiar la imagen
+    // setTimeout(function() {
+      $(".main-image img").attr("src", imgSrc);
+     // $("#mainImage").css("opacity", 1);  Restablecer la opacidad a 1
+    // }, 500);  Tiempo de espera de la transición en milisegundos (ajustar según la duración de la transición CSS)
+  });
+
+  
+});
 
   function goBack() {
   window.history.back();
+}
+const openModal = (opt,img) =>{
+ 
+  document.getElementById(opt).style.display='block'
+}
+
+const closeModal = (opt) =>{
+  document.getElementById(opt).style.display='none'
 }
 </script>
 
@@ -68,29 +88,22 @@ $(document).ready(function(){
 
     
     <?php
-$sql="SELECT * FROM products where estado_producto='Activo' ORDER BY nombre_producto ASC";
-$resul= mysqli_query($conexion,$sql);
+    $sql="SELECT * FROM products where estado_producto='Activo' ORDER BY nombre_producto ASC";
+    $resul= mysqli_query($conexion,$sql);
 
-if(mysqli_num_rows($resul) > 0){
-    while ($row=mysqli_fetch_array($resul)){
-?>
+    if(mysqli_num_rows($resul) > 0){
+        while ($row=mysqli_fetch_array($resul)){
+    ?>
     <div class="col-md-3 product-item" category="<?php echo $row['tipo_product'];?>">
         <form method="post" action="index.php?action=add&id=<?php echo $row['id_producto']; ?>">
             <?php
 
             ?>
             <div class="carro" align="center"category="<?php echo $row['tipo_product'];?>">
-                <img src="cart/imgs/<?php echo $row['img'];?>" class="img-responsive" onclick="document.getElementById('<?php echo $row['id_producto']; ?>').style.display='block'" style="width:auto;"/><br />
+                <img src="cart/imgs/<?php echo $row['img'];?>" class="img-responsive" onclick="openModal(<?php echo $row['id_producto']; ?>,'cart/imgs/<?php echo $row['img'];?>')" style="width:auto;"/><br />
                 <h4 class="text-info"><?php echo $row['nombre_producto'];?></h4>
                 <h4 class="text-danger">$<?php echo $row['precio_producto'];?></h4>
-                
-               
-                
             </div>
-            
-            
-        
-    
         </form>
     </div>
        
@@ -100,13 +113,33 @@ if(mysqli_num_rows($resul) > 0){
   
   <form class="modal-content animate">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('<?php echo $row['id_producto']; ?>').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <div id="raro"><h4 class="descripcion"><?php echo $row['nombre_producto'];?></h4></div>
-      <img src="cart/imgs/<?php echo $row['img'];?>" alt="Avatar" class="avatar">
+      <span onclick="closeModal(<?php echo $row['id_producto']; ?>)" class="close" title="Close Modal">&times;</span>
+      <h4 class="descripcion"><?php echo $row['nombre_producto'];?></h4>
+      <div id="raro" class="desc-parraf">
       
-    
+        <div class="w4" style="height: 100%;">
+        <p><?php echo $row['descripcion'];?></p>
+        </div>
+      </div>
+      <br />
+      <!-- <img src="cart/imgs/<?php echo $row['img'];?>" alt="Avatar" class="avatar"> -->
+      <div class="gallery-container">
+        <section id="slider">
+          <!-- <div class="dp-flex w10"> -->
+            <input type="radio" name="slider" id="s1" checked>
+            <input type="radio" name="slider" id="s2">
+            <input type="radio" name="slider" id="s3">              
+          <!-- </div> -->
+          <label for="s1" id="slide1"><img src="cart/imgs/<?php echo $row['img'];?>" id="<?php echo $row['id_producto']; ?>" alt="Avatar"></label>
+          <label for="s2" id="slide2"><img src="cart/imgs_lat/<?php echo $row['img_lat'];?>" id="<?php echo $row['id_producto']; ?>" alt="Avatar"></label>
+          <label for="s3" id="slide3"><img src="cart/imgs_back/<?php echo $row['img_back'];?>" id="<?php echo $row['id_producto']; ?>" alt="Avatar"></label>
+        </section>
+      </div>
+
+
+
     </div>
-</form>
+  </form>
 </div>
         
         <?php
@@ -135,122 +168,6 @@ if(mysqli_num_rows($resul) > 0){
 </html>
 
 
-<style>
-
-	
-	
-	
-button:hover {
-  opacity: 0.8;
-}
-
-
-
-/* Center the image and position the close button */
-.imgcontainer {
-  
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 40%;
-}
-.container {
-  padding: 2px;
-  display: contents;
-}
-
-    h4.descripcion{
-        position: inherit;
-        float: left;
-    }
-
-    #raro{
-        width: 50%;
-        height: auto;
-        
-        float: right;
-        margin-right: 10%;
-    }
-    
-    
-    
-/* The Modal (background) */
-.modales {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  /* overflow: auto; */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  /* padding-top: 60px; */
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-  -webkit-animation: animatezoom 0.6s;
-  animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-  from {-webkit-transform: scale(0)} 
-  to {-webkit-transform: scale(1)}
-}
-  
-@keyframes animatezoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-     display: block;
-     float: none;
-  }
-  .cancelbtn {
-     width: 100%;
-  }
-}
-	
-	
-	
-	.products-list{
-		display: flex;
-		flex-wrap: wrap;
-	}	
-	
-	
-</style>
 
 <script>
 // Get the modal

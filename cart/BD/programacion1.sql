@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-11-2020 a las 22:20:17
--- Versión del servidor: 10.1.37-MariaDB
--- Versión de PHP: 7.2.12
+-- Tiempo de generación: 13-12-2022 a las 03:50:47
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -132,7 +131,7 @@ CREATE TABLE `dimensiones_pro` (
   `base_ancho` int(11) DEFAULT NULL,
   `falso` int(11) DEFAULT NULL,
   `talla_chaqueta` int(11) DEFAULT NULL,
-  `talla_chaqueta1` text COLLATE utf8_spanish_ci,
+  `talla_chaqueta1` text COLLATE utf8_spanish_ci DEFAULT NULL,
   `extra` varchar(255) COLLATE utf8_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -285,7 +284,7 @@ CREATE TABLE `material` (
   `nombre` text COLLATE utf8_spanish_ci NOT NULL,
   `tipo` text COLLATE utf8_spanish_ci NOT NULL,
   `color` text COLLATE utf8_spanish_ci NOT NULL,
-  `detalle` text COLLATE utf8_spanish_ci,
+  `detalle` text COLLATE utf8_spanish_ci DEFAULT NULL,
   `ancho_rollo` decimal(5,1) NOT NULL,
   `metros` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
@@ -386,24 +385,20 @@ INSERT INTO `mov_pro` (`id_producto`, `fecha_mov`, `movimiento`, `cantidad`) VAL
 CREATE TABLE `products` (
   `id_producto` int(11) NOT NULL,
   `img` varchar(15) NOT NULL,
+  `img_lat` varchar(250) DEFAULT NULL,
+  `img_back` varchar(250) DEFAULT NULL,
   `nombre_producto` char(255) NOT NULL,
   `estado_producto` text NOT NULL,
-  `fecha_registro` date NOT NULL,
   `precio_producto` double NOT NULL,
-  `descripcion` text NOT NULL,
-  `unidades_dispo` int(11) NOT NULL,
-  `IVA` decimal(10,0) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `tipo_product` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 DELAY_KEY_WRITE=1;
 
 --
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id_producto`, `img`, `nombre_producto`, `estado_producto`, `fecha_registro`, `precio_producto`, `descripcion`, `unidades_dispo`, `IVA`) VALUES
-(1, '1.jpg', 'Maleta negra', 'Inactivo', '2020-10-30', 28000, 'Negra con cremallera fea jfjsjfjdjsdf', 15, '10'),
-(2, '3.png', 'Maleta roja', 'Activo', '2020-10-08', 28000, 'cremallera negra', 15, '10'),
-(6, '22.jpg', 'Maleta oscura', 'Inactivo', '2020-10-14', 25000, 'Es oscuro', 30, '19'),
-(3, '4.jpg', 'Maleta roja', 'Activo', '2020-10-12', 12000, 'Negra con cremallera fea', 15, '10');
+INSERT INTO `products` (`id_producto`, `img`, `img_lat`, `img_back`, `nombre_producto`, `estado_producto`, `precio_producto`, `tipo_product`) VALUES
+(1, '1b.jpg', '1a.jpg', '1a.jpg', 'ddfkjfdjf', 'Activo', 2, 'Maletas');
 
 -- --------------------------------------------------------
 
@@ -420,18 +415,6 @@ CREATE TABLE `tipo_product` (
   `material_usado` int(11) DEFAULT NULL,
   `insumo_usado` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
---
--- Volcado de datos para la tabla `tipo_product`
---
-
-INSERT INTO `tipo_product` (`id_producto`, `tipo_producto`, `genero`, `id_material`, `id_insumo`, `material_usado`, `insumo_usado`) VALUES
-('1', 'Maletas', NULL, NULL, NULL, NULL, NULL),
-('2', 'Maletas', NULL, NULL, NULL, NULL, NULL),
-('3', 'Maletas', NULL, NULL, NULL, NULL, NULL),
-('4', 'Maletas', NULL, NULL, NULL, NULL, NULL),
-('5', 'Maletas', NULL, NULL, NULL, NULL, NULL),
-('6', 'Maletas', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -596,7 +579,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas

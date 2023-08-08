@@ -1,8 +1,8 @@
 <?php
     $BD_host="localhost";
-    $BD_usr="root";
-    $BD_pass="";
-    $BD_database="programacion1";
+    $BD_usr="id21123214_kert";
+    $BD_pass="Sebas1003*";
+    $BD_database="id21123214_programacion1";
     
     $conectar=mysqli_connect($BD_host,$BD_usr,$BD_pass);
     

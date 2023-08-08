@@ -1,0 +1,280 @@
+:root{
+    --color-light: #124bad;
+    --color-semilight: #0e3c8a;
+    --color-primary: #0C3273;
+    --color-semidark: #0a285c;
+    --color-dark: #06193a;
+    --color-hover: #480C0C;
+    --color-danger: #CC0000;
+    --color-warning: #ffb900;
+    --color-success: #107c10;
+    --color-danger-fond: rgba(204, 0, 0, 0.3);
+    --color-warning-fond: rgba(255, 185, 0, 0.3);
+    --color-susses-fond: rgba(16, 124, 16, 0.3);
+    --color-neutral-light-III:#ffffff;
+    --color-neutral-light-II:#f3f3f3;
+    --color-neutral-light-I:#eaeaea;
+    --color-neutral-base:#c8c8c8;
+    --color-neutral-dark-I:#999999;
+    --color-neutral-dark-II:#4b4b4b;
+    --color-neutral-dark-III:#1a1a1a;
+    --font-primary: 'Segoe UI';
+    --font-size-primary: 1.375rem;
+    --font-size-secondary: 1.125rem;
+    --font-size-tertiary: 1rem;
+    --font-size-quarternary: 0.875rem;
+    --font-size-pentanary: 0.75rem;
+}
+body {
+	background: #dadada;
+	
+	background-position: center center;
+	
+	/* Para que la imagen de fondo no se repita */
+	
+	background-repeat: no-repeat;
+	
+	/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+	
+	background-attachment: fixed;
+	
+	/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+	
+	background-size: cover;
+	
+	/* Se muestra un color de fondo mientras se está cargando la imagen
+	
+	de fondo o si hay problemas para cargarla */
+	
+	/* background-color: #669999; */
+	
+	
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+			color: #000;
+			font-family: "Century Gothic";
+			font-size: 16px;
+			line-height: 1.6;
+		}
+		h2 {
+			color: #000;
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 22px;
+			margin: 15px;
+			text-align: center;
+			
+		}
+		.group {
+			border: 3px solid #999999;
+			padding: 20px;
+			width: 65%;
+			color: #006;
+			border-radius: 8px;
+			border-color:#036;
+			/* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d1eeff',GradientType=0 );  */
+			margin-top: 0;
+			margin-right: auto;
+			margin-bottom: 0;
+			margin-left: auto;
+			position: absolute;
+			left: 0;
+			right: 0;
+			background: white;
+		}
+		.contact-form {
+			width: 400px;
+			text-align: left;
+		
+		}
+		
+		
+		
+		/* Form submit button */
+		.form-btn {
+			padding: 0 15px;
+			height: 30px;
+			min-width: 150px;
+			font: bold 12px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			text-align: center;
+			color: #fff;
+			text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+			cursor: pointer;
+			border: 1px solid #0d3d6a;
+			outline: none;
+			position: relative;
+			background-color: #1d83e2;
+			background-image: -webkit-gradient(linear, left top, left bottom, from(#1d83e2), to(#0d3d6a)); /* Saf4+, Chrome */
+			background-image: -webkit-linear-gradient(top, #1d83e2, #0d3d6a); /* Chrome 10+, Saf5.1+, iOS 5+ */
+			background-image:    -moz-linear-gradient(top, #1d83e2, #0d3d6a); /* FF3.6 */
+			background-image:     -ms-linear-gradient(top, #1d83e2, #0d3d6a); /* IE10 */
+			background-image:      -o-linear-gradient(top, #1d83e2, #0d3d6a); /* Opera 11.10+ */
+			background-image:         linear-gradient(top, #1d83e2, #0d3d6a);
+			/* -pie-background:          linear-gradient(top, #1d83e2, #0d3d6a); IE6-IE9 */
+			-moz-box-shadow:    inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+			-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+			box-shadow:         inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.7);
+			-moz-background-clip:    padding;
+			-webkit-background-clip: padding-box;
+			background-clip:         padding-box;
+			behavior: url(PIE.htc);
+		}
+		
+		.form-btn:active {
+			border: 1px solid #1d83e2;
+			background-color: #0d3d6a;
+			/* background-image: -webkit-gradient(linear, left top, left bottom, from(#0d3d6a), to(#1d83e2)); Saf4+, Chrome */
+			background-image: -webkit-linear-gradient(top, #0d3d6a, #1d83e2); /* Chrome 10+, Saf5.1+, iOS 5+ */
+			background-image:    -moz-linear-gradient(top, #0d3d6a, #1d83e2); /* FF3.6 */
+			background-image:     -ms-linear-gradient(top, #0d3d6a, #1d83e2); /* IE10 */
+			background-image:      -o-linear-gradient(top, #0d3d6a, #1d83e2); /* Opera 11.10+ */
+			background-image:         linear-gradient(top, #0d3d6a, #1d83e2);
+			/* -pie-background:          linear-gradient(top, #0d3d6a, #1d83e2); IE6-IE9 */
+			-moz-box-shadow:    inset 0 0 2px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+			-webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+		
+			box-shadow:         inset 0 0 2px rgba(0, 0, 0, 0.7), 0 1px 0 rgba(255, 255, 255, 0.1);
+			behavior: url(PIE.htc);
+		}
+		
+		label {
+			display: block;
+			color: #003;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		
+		label span {
+			font-size: 12px;
+			color:#333;
+			font-weight: normal;
+		}
+
+		.input-txt{
+			width: 30%;
+
+		}
+		.input-select{
+			width: 20%;
+		}
+		.form-input{
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			border-radius: 5px;
+			padding: 5px;
+			height: 35px;
+			transition: border-color 0.3s ease, box-shadow 0.3s ease;
+		}
+		.form-input:focus {
+			border-color: #2196f3;
+			box-shadow: 0 0 8px 0 #2196f3;
+			outline: none;
+		}
+		select {
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			border-radius: 5px;
+			padding: 5px;
+			height: 35px;
+			transition: border-color 0.3s ease, box-shadow 0.3s ease;
+		}
+		
+		select:focus {
+			border-color: #2196f3;
+			box-shadow: 0 0 8px 0 #2196f3;
+			outline: none;
+		}
+		textarea {
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-sizing: border-box;
+			padding: 5px;
+			transition: border-color 0.3s, box-shadow 0.3s;
+			width: 100%;
+		}
+		
+		textarea:focus {
+			border-color: #2196f3;
+			box-shadow: 0 0 8px 0 #2196f3;
+			outline: none;
+		}
+	
+	.file-select input[type="file"] {
+	  /* opacity: 0; */
+	  width: auto;
+	  /* height: 32px; */
+	  display: inline-block;
+	}
+	
+	/* #src-file1::before {
+	  content: 'Seleccionar Archivo 1';
+	} */
+
+	.img-prev{
+		width: 150px;
+		height: auto;
+	}
+
+	.dp-flex{
+		display: flex;
+		justify-content: space-between;
+	}
+	.jf-c{justify-content: center;}
+	.dp-flex-star{
+		display: flex;
+		justify-content: flex-start;
+	}
+	.w-i{
+		width: -webkit-fill-available;
+	}
+
+	.mrg-t1{margin-top: 10px;}
+	.mrg-t2{margin-top: 20px;}
+	.mrg-t3{margin-top: 30px;}
+	
+
+	.w10{width: 100%;}
+	.w9{width: 90%;}
+	.w8{width: 80%;}
+	.w5{width: 50%;}
+	.w48{width: 48%;}
+	.w4{width: 40%;}
+	
+	.mrg-b1{margin-bottom: 10px;}
+	.mrg-b15{margin-bottom: 15px;}
+	.mrg-b2{margin-bottom: 20px;}
+	.mrg-b3{margin-bottom: 30px;}
+	.inp-img{
+		width: 30%;
+	}
+
+	input[type="file"]{
+		width: 100%;
+		height: 35px;
+		outline: none;
+		padding: 6px 3px;
+		box-sizing: border-box;
+		position: relative;
+		color: var(--color-neutral-dark-I);
+		font-size: var(--font-size-quarternary);
+		border: 1px solid var(--color-neutral-base);
+		background: var(--color-neutral-light-III);
+		border-radius: 5px;
+	}
+	input[type="file"]::after{
+		top: 0px;
+		right: 0;
+		width: 25%;
+		padding: 5px;
+		height: 32px;
+		outline: none;
+		background: none;
+		text-align: center;
+		position: absolute;
+		content: 'Browser';
+		color: var(--color-primary);
+		height: -webkit-fill-available;
+		background: var(--color-neutral-light-III);
+		border: 1px solid var(--color-primary);
+	}
+	::-webkit-file-upload-button{
+		display: none;
+	}

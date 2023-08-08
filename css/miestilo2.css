@@ -10,7 +10,7 @@ body {
 
 header {
 width: 100%;
-background-color: rgba(51,150,255,0.5);
+background-color: rgba(51,150,255);
 
 }
 
@@ -23,7 +23,7 @@ background-color: rgba(51,150,255,0.5);
 
 header label {
     display: none;
-    width: 30px;
+    width: 50px;
     height: 30px;
     padding: 10px;
     border-right: 1px solid #fff;

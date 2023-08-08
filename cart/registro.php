@@ -70,8 +70,8 @@ print_r($_REQUEST);
         else{
 					
 					
-                    $sql="INSERT INTO  products (img, img_lat, img_back, nombre_producto, estado_producto, precio_producto, tipo_product) VALUES 
-                    ('$imagen','$img_lat','$img_back','$_REQUEST[nombreart]','$_REQUEST[estado]','$_REQUEST[precioart]','$_REQUEST[tipoart]')";
+                    $sql="INSERT INTO  products (img, img_lat, img_back, nombre_producto, estado_producto, precio_producto, tipo_product, descripcion) VALUES 
+                    ('$imagen','$img_lat','$img_back','$_REQUEST[nombreart]','$_REQUEST[estado]','$_REQUEST[precioart]','$_REQUEST[tipoart]','$_REQUEST[descripcion]')";
 					
                     
                     $result_guardar = $objConexion->query($sql);

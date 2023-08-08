@@ -6,13 +6,15 @@ extract ($_REQUEST);
 
 
 $objConexion=Conectarse();
+session_start();
 
+  if (($_SESSION['iniciar'])!="") {
 ?>
 
 <?php
       
       $sql="SELECT * FROM products WHERE id_producto='$_REQUEST[codigo]'";
-          
+      $tablaCompleta="SELECT * FROM products";
       $result = $objConexion->query($sql);
       $compara_usr=mysqli_num_rows($result);
       if($compara_usr != 1){
@@ -47,7 +49,7 @@ $objConexion=Conectarse();
   
   <?php
   //vamos agregar cada fila de la tabla de acuerdo al número de empleados de forma dinamica
-  
+
   while ($producto = $result->fetch_object())
   {
      
@@ -85,7 +87,14 @@ $objConexion=Conectarse();
         
         <?php  
         }
-      
+      }else{
+
+        echo '<script>
+                alert("Inicia sesion");
+                location.href = "../php/form_inicio.php";
+              </script>';
+        exit;
+      }
     ?>
 </table>
 <p>
@@ -138,5 +147,6 @@ background-color: #66999;
 }
 td,th{background-color: #E8E8E8;}
 </style>
+<script src="../js/filtro-tabla.js"></script>
 </body>
 </html>

@@ -25,8 +25,8 @@
 <body>
 <div class="container">
 <a href="../Index.html"><img src="../imgs/atras.png" align="left" width=80 height=80></a>
-<center> <div class="box"><a href="registro_car.php"><img class = "pa" src = "imgs/subir_datos2.png"/><br>Subir información</a></div></center>
- <center><div class="box1"><a href="actualizar_art.html"><img class = "pa2" src = "imgs/logo wiiii2.png"/><br>Actualizar información</a></div></center>
+<center> <div class="box"><a href="registro_car.php"><img class = "pa" src = "../imgs/subir_datos2.png"/><br>Subir información</a></div></center>
+ <center><div class="box1"><a href="articulo/tabla_art.php"><img class = "pa2" src = "../imgs/logo wiiii2.png"/><br>Actualizar información</a></div></center>
 
 
 </div>
@@ -37,10 +37,10 @@
 }else{
 
   echo '<script>
-                            alert("Inicia sesion");
-                            location.href = "../php/form_inicio.php";
-                          </script>';
-                    exit;
+          alert("Inicia sesion");
+          location.href = "../php/form_inicio.php";
+        </script>';
+  exit;
 }
 
 ?>

@@ -1,400 +1,322 @@
 <!DOCTYPE html>
 <html lang="es">
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   
-
+    
 <head>
-<link rel="shortcut icon" href="imgs/logowiii.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imgs/logowiii.png" />
     <title>Creaciones Daniela</title>
-	<meta charset="utf-8"/>
-	<link rel="stylesheet" href="css/miestilo2.css" type="text/css" media="all">
-	<link rel="stylesheet" href="font/style.css" type="text/css" media="all">
-    
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15">
+    <link rel="stylesheet" href="prueba.css" type="text/css" media="all">
+    <link rel="stylesheet" href="font/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="estilos.css">
-    
-     <script src="js/jquery.js"></script>
+
+    <script src="js/jquery.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
 
-	
+    <link rel="stylesheet" href="css/slider-inicial-v2.css" media="screen">
+    <link rel="stylesheet" href="css/slider-inicial.css" media="screen">
+    <script class="u-script" type="text/javascript" src="js/jquery-slider-inicial.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="js/slider-inicial.js" defer=""></script>
+    <!-- <script type="text/javascript" src="funcionesBanner.js"></script> -->
+
+
 </head>
 
-<body>
 <header>
+    <input type="checkbox" id="btn-menu">
+    <label for="btn-menu"><img src="imgs/menu.png" width="30px" height="30px"></label>
+
+    <nav class="menu">
+        <ul class="u-unstyled">
+            <li><a href="Galeria.html"><span class="icon-users"> Nosotros</a></li>
+            <li><a href="php/registroCliente.php"><span class="icon-user-plus"> Trabaje con nosotros</a></li>
+            <li><a href="php/cerrar.php"><i class="fas fa-sign-out-alt" style="font-size: 18px; margin-right: 6px;"></i>cerrar sesión</a></li>
+
+            <!-- <input type="search" id="input-search" placeholder="Buscar aqui"> -->
+
+            <div class="content-search">
+                <div class="content-table">
+                    <table id="table">
+                        <thead>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td><a href="subir.html">nuevo artículo</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="cargos">registrar usuario</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="newclientes.html">registrar cliente</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="catalogo.html">catálogo</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="tabla.html">material</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="clientes.html">clientes</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="proveedores.html">proveedores</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="edcargos.html">actualizar información usuario</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="edclientes.html">actualizar información cliente </a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="#">actualizar información proveedor</a></td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="carro.html">encargo de varios prodúctos</a></td>
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        </ul>
+
+
+
+
+
+    </nav>
+
+
+
     
-		
-		<input type="checkbox" id="btn-menu">
-		<label for="btn-menu"><img src="imgs/menu.png"  width="30px" height="30px">
-
-
-		</label>
-   
-		<nav class="menu">
-
-
-			<ul>
-				<li><a href="Galeria.html"><span class="icon-file-picture"/> Galería</a></li>
-
-                
-                
-    <input type="search" id="input-search" placeholder="Buscar aqui">
     
-    <div class="content-search">
-        <div class="content-table">
-            <table id="table">
-                <thead>
-                    <tr>
-                        <td></td>
-                    </tr>
-                </thead>
-                
-                <tbody>
-                    <tr>
-                        <td><a href="subir.html">nuevo artículo</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="cargos">registrar usuario</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="newclientes.html">registrar cliente</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="catalogo.html">catálogo</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="tabla.html">material</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="clientes.html">clientes</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="proveedores.html">proveedores</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="edcargos.html">actualizar información usuario</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="edclientes.html">actualizar información cliente </a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="#">actualizar información proveedor</a></td>
-                    </tr>
-                    
-                    <tr>
-                        <td><a href="carro.html">encargo de varios prodúctos</a></td>
-                    </tr>
-                    
-                    
-                    
-                </tbody>
-            </table>
-        </div>
+</header>
+<body onload="loadImageGallery();">
+
+    
+    <!-- <div class="linea cy pf line-y"></div>
+    <div class="linea-dos pf cb line-y"></div>
+    <div class="linea-x cy pf line-x"></div>
+    <div class="linea-x-dos cb pf line-x"></div> -->
+    <div class="logo" style="width: 100%; height: 100%; position: absolute;">
+        <img src="imgs/logo_kert.svg" alt="logo_kert" class="logo-img">
     </div>
 
-                
-			</ul>
+    <div id="cal2" class="container">
+        <div class="box" style="z-index: 10;"><a href="cart/gestion.php"><img class="pa" src="imgs/nuevoart.png" /></div>
+        <div class="box" style="z-index: 10;"><a href="cart/carro.php"><img class="pa2" src="imgs/cart.png" /></div>
+    </div>
 
+    <script src="js/search.js"></script>
 
-
-
-
-		</nav>
+    <div class="u-body u-xl-mode">
+        <section class="u-clearfix u-container-align-center u-grey-10 u-section-1" id="carousel_5c57">
+          <div class="u-clearfix u-sheet u-sheet-1">
+            <div id="carousel-4334" data-interval="5000" data-u-ride="carousel" class="u-carousel u-expanded-width u-slider u-slider-1">
+              <ol class="u-absolute-hcenter u-carousel-indicators u-carousel-indicators-1">
+                <li data-u-target="#carousel-4334" class="u-active u-active-palette-3-base u-hover-palette-3-base u-palette-1-base u-shape-circle" data-u-slide-to="0" style="width: 22px; height: 22px;"></li>
+                <li data-u-target="#carousel-4334" class="u-active-palette-3-base u-hover-palette-3-base u-palette-1-base u-shape-circle" data-u-slide-to="1" style="width: 22px; height: 22px;"></li>
+                <li data-u-target="#carousel-4334" class="u-active-palette-3-base u-hover-palette-3-base u-palette-1-base u-shape-circle" data-u-slide-to="2" style="width: 22px; height: 22px;"></li>
+              </ol>
+              <div class="u-carousel-inner" role="listbox">
+                <div class="u-active u-carousel-item u-container-style u-palette-1-base u-slide u-carousel-item-1">
+                  <div class="u-container-layout u-valign-top-lg u-container-layout-1">
+                    <div class="u-align-left u-container-align-left u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-shape-rectangle u-group-1">
+                      <div class="u-container-layout u-valign-top u-container-layout-2">
+                        <h3 class="u-align-left u-text u-text-1" data-animation-name="customAnimationIn" data-animation-duration="1000"> Our Team</h3>
+                        <p class="u-align-left u-text u-text-2" data-animation-name="customAnimationIn" data-animation-duration="1000">Sample text. Click to select the text box. Click again or double click to start editing the text.&nbsp;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&nbsp;</p>
+                        <a href="https://nicepage.com/es/temas-wordpress" class="u-active-white u-align-left u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-3-base u-radius-50 u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-1" data-animation-name="customAnimationIn" data-animation-duration="1000">let's talk</a>
+                      </div>
+                    </div>
+                    <img src="images/12312.jpg" alt="" class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-1" data-image-width="663" data-image-height="663" data-animation-name="customAnimationIn" data-animation-duration="1000">
+                  </div>
+                </div>
+                <div class="u-carousel-item u-container-style u-palette-1-base u-slide u-carousel-item-2">
+                  <div class="u-container-layout u-valign-top-lg u-container-layout-3">
+                    <div class="u-align-left u-container-align-left u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-shape-rectangle u-group-2">
+                      <div class="u-container-layout u-valign-top u-container-layout-4">
+                        <h3 class="u-align-left u-text u-text-3" data-animation-name="customAnimationIn" data-animation-duration="1000"> What we do</h3>
+                        <p class="u-align-left u-text u-text-4" data-animation-name="customAnimationIn" data-animation-duration="1000">Sample text. Click to select the text box. Click again or double click to start editing the text.&nbsp;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&nbsp;</p>
+                        <a href="https://nicepage.com/k/birthday-html-templates" class="u-active-white u-align-left u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-3-base u-radius-50 u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-2" data-animation-name="customAnimationIn" data-animation-duration="1000">let's talk</a>
+                      </div>
+                    </div>
+                    <img src="images/rt432i.jpg" alt="" class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-2" data-image-width="663" data-image-height="663" data-animation-name="customAnimationIn" data-animation-duration="1000">
+                  </div>
+                </div>
+                <div class="u-carousel-item u-container-style u-palette-1-base u-slide u-carousel-item-3">
+                  <div class="u-container-layout u-valign-top-lg u-container-layout-5">
+                    <div class="u-align-left u-container-align-left u-container-style u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-group u-shape-rectangle u-group-3">
+                      <div class="u-container-layout u-valign-top u-container-layout-6">
+                        <h3 class="u-align-left u-text u-text-5" data-animation-name="customAnimationIn" data-animation-duration="1000"> Our culture</h3>
+                        <p class="u-align-left u-text u-text-6" data-animation-name="customAnimationIn" data-animation-duration="1000">Sample text. Click to select the text box. Click again or double click to start editing the text.&nbsp;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&nbsp;</p>
+                        <a href="https://nicepage.com/html-website-builder" class="u-active-white u-align-left u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-3-base u-radius-50 u-text-active-palette-1-base u-text-hover-palette-1-base u-text-palette-1-base u-btn-3" data-animation-name="customAnimationIn" data-animation-duration="1000">let's talk</a>
+                      </div>
+                    </div>
+                    <img src="images/3q6.jpg" alt="" class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-3" data-image-width="663" data-image-height="663" data-animation-name="customAnimationIn" data-animation-duration="1000">
+                  </div>
+                </div>
+              </div>
+              <a class="u-absolute-vcenter u-carousel-control u-carousel-control-prev u-hidden-sm u-hidden-xs u-spacing-5 u-text-body-alt-color u-text-hover-palette-3-base u-carousel-control-1" href="#carousel-4334" role="button" data-u-slide="prev">
+                <span aria-hidden="true">
+                  <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+            c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
+                </span>
+                <span class="sr-only">
+                  <svg viewBox="0 0 477.175 477.175"><path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225
+            c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path></svg>
+                </span>
+              </a>
+              <a class="u-absolute-vcenter u-carousel-control u-carousel-control-next u-hidden-sm u-hidden-xs u-spacing-5 u-text-body-alt-color u-text-hover-palette-3-base u-carousel-control-2" href="#carousel-4334" role="button" data-u-slide="next">
+                <span aria-hidden="true">
+                  <svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+            c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
+                </span>
+                <span class="sr-only">
+                  <svg viewBox="0 0 477.175 477.175"><path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+            c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z"></path></svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
 
     
- 
+    <style type="text/css">
+       
 
+        .container {
+            width: 120px;
+            height: auto;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-flow: wrap;
+        }
 
+        .box {
+            width: 200px;
+            height: 100px;
+            box-sizing: border-box;
+            text-decoration-color: red;
+        }
 
-	</header>
+        .box1 {
+            width: 120px;
+            height: 100px;
 
 
+            box-sizing: border-box;
+            font-size: 20px;
 
 
+        }
 
+        @media screen and (max-width: 600px) {
+            .container {
+                width: 40%;
+                height: 50px;
+                margin-top: -2px;
 
-  
-   
-	
-		<div id="sidebar" class="sidebar">
-		<a href="#" class="boton-cerrar" onclick="ocultar()">&times;</a>
-			<ul class="menu">
-				<li><div><a><h1>Misión</h1>
-<p>Diseñar y producir prendas de vestir de la más alta calidad, de acuerdo a los gustos y tendencias del mercado, logrando plena satisfacción de nuestros clientes, contribuyendo al desarrollo económico del país y maximizando el valor para los accionistas. Es misión de Creaciones Daniela L.S., ofrecer a nuestro personal un entorno laboral estable y plenamente identificado con los objetivos de la empresa y con la integración de cada uno de nosotros.</p></a></li>
+            }
+        }
 
+        @media screen and (max-width: 1200px) {
+            .box {
+                width: 40%;
+            }
+        }
 
-				<li><a><h1>Visión</h1>
-<p>Ser reconocido como una empresa líder en confecciones de prendas de vestir con calidad internacional.</p></h3></a></li></p>
-			
-				
-			</ul>
-  
-	</div>
-			
-	
+        @media screen and (max-width: 600px) {
+            .box {
+                width: 60px;
+                height: 60px;
 
-    
-     <div id="cal2" class="container">
+            }
 
- <div class="box"><a href="cart/gestion.php"><img class = "pa" src = "imgs/nuevoart.png"  /></div>
- <div class="box"><a href="cart/carro.php"><img class = "pa2" src = "imgs/cart.png"/></div>
- 	
+        }
 
 
-</div>
-    
- 
-	<div id="contenido">
-	    
-	<div id="salir" class="box1"><a href="php/cerrar.php"><img class = "pa" src = "imgs/salir.png"  />cerrar sesión</div>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		 
-		
-		
-	
-		
-	 <br>
-		
-		
-	
-		
-		<center><p><a href="Galeria.html"><img src="imgs/new_log.png" ></a></p></center>
-		
-		
-		
-		
-		
-		
+        @media screen and (max-width: 1200px) {
+            .box1 {
+                width: 40%;
 
-			
-	</div>
+            }
+        }
 
+        @media screen and (max-width: 600px) {
+            .box1 {
+                width: 60px;
+                height: 60px;
 
-   <script src="js/search.js"></script>
-	
-	
-<script>
-function mostrar() {
-    document.getElementById("sidebar").style.width = "250px";
-    document.getElementById("contenido").style.marginLeft = "250px";
-    document.getElementById("abrir").style.display = "none";
-    document.getElementById("cerrar").style.display = "inline";
-}
+            }
+        }
 
-function ocultar() {
-    document.getElementById("sidebar").style.width = "0";
-    document.getElementById("contenido").style.marginLeft = "0";
-    document.getElementById("abrir").style.display = "inline";
-    document.getElementById("cerrar").style.display = "none";
-}
-</script>
 
 
+        img.pa {
 
+            margin: auto;
+            margin-top: 5px;
 
+            width: auto;
+            height: 80%;
 
+        }
 
+        img.pa2 {
 
+            margin: auto;
+            margin-top: 5px;
 
+            width: 80%;
+            height: 80%;
 
+        }
 
+        
 
+        .linea:first-child {
+        left: 0;
+        }
 
+        .linea:last-child {
+        left: 4px; /* Ajusta este valor para espaciar las líneas */
+        }
 
+        #salir {
+            float: left;
+            margin-top: -15px;
+        }
 
+        a {
+            color: red;
+        }
 
+        
+    </style>
 
-
-
-
-
-
-
-<style type="text/css">
-
-
-body {
-
-/* Ubicación de la imagen */
-
-background-image: url(imgs/fondo.png);
-
-/* Para dejar la imagen de fondo centrada, vertical y
-
-horizontalmente */
-
-background-position: center center;
-
-/* Para que la imagen de fondo no se repita */
-
-background-repeat: no-repeat;
-
-/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
-
-background-attachment: fixed;
-
-/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
-
-background-size: cover;
-
-/* Se muestra un color de fondo mientras se está cargando la imagen
-
-de fondo o si hay problemas para cargarla */
-
-background-color: #66999;
-
-}
-
-
-
-
-
-
-
- .container{
-  width: 120px;
-  height: auto;
-  
-  
-
-   
-  margin-top:50px;
-
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-flow: wrap;
-
-  }
-
-  .box{
-    width: 200px;
-    height: 100px;
-    
-    
-    box-sizing: border-box;
-    
-    text-decoration-color: red;
-
-  }
-
-  .box1{
-    width: 120px;
-    height: 100px;
-    
-    
-    box-sizing: border-box;
-    font-size: 20px;
-    
-
-  }
-
- 
-
-
-
-
-@media screen and (max-width: 600px){
-     .container{
-      width: 40%;
-      height: 50px;
-      margin-top: -2px;
-
-     }
-  }
-
-
-
-
-
-  @media screen and (max-width: 1200px){
-     .box{
-      width: 40%;
-      
-     }
-
-     
-  }
-
-  @media screen and (max-width: 600px){
-     .box{
-      width: 60px;
-      height: 60px;
-      
-     }
-     
-  }
-
-
-   @media screen and (max-width: 1200px){
-     .box1{
-      width: 40%;
-      
-     }
-  }
-
-  @media screen and (max-width: 600px){
-     .box1{
-      width: 60px;
-      height: 60px;
-      
-     }
-  }
-
-
-
-  img.pa{
-
-    margin:auto;
-  margin-top:5px;
-
-    width:auto; 
-    height:80%;
-
-  }
-
-  img.pa2{
-
-    margin:auto;
-    margin-top:5px;
-    
-    width:80%; 
-    height:80%;
-
-  }
-
-
-  #salir{float: left; margin-top: -15px;}
-
-  a{color: red;}
-
-
-  header{
-    width: 100%;
-    height: 50px;
- 
-    
-}
-
-</style>
-
-
-
-
-
-
-
-
-     
 </body>
-</html> 
+
+</html>
